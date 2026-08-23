@@ -68,6 +68,8 @@ class ChatResponse(RecommendationResponse):
     offers: list[ProductFact] = Field(default_factory=list)
     trends: list[ProductFact] = Field(default_factory=list)
     needs_clarification: bool = False
+    source: str = "synthetic_demo_data"
+    data_freshness: str | None = None
 
 class SessionResponse(BaseModel):
     session_id: str

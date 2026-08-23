@@ -2,6 +2,8 @@ from app.chat.session import SessionStore
 from app.tools.registry import ToolRegistry
 from app.tools.database import DatabaseTools
 from app.chat.orchestrator import ChatOrchestrator
+from app.chat.assistant import CustomerAssistant
+from app.recommendations.service import rank_products
 from scripts.generate_dummy_data import generate
 
 def test_sessions_are_bounded_and_deletable():
@@ -57,3 +59,13 @@ def test_orchestrator_uses_friendly_fallback_for_empty_model_reply():
     _, answer, used=orchestrator.respond('something unclear')
 
     assert answer.startswith('I can help') and used==[]
+
+
+def test_assistant_resolves_second_product_follow_up():
+    store=generate(); tools=DatabaseTools(store); sessions=SessionStore()
+    assistant=CustomerAssistant(tools,sessions,lambda request: rank_products(store,request))
+    first=assistant.handle('Tell me about Coffee')
+    second=assistant.handle('What is its price?',first['session_id'])
+    assert first['needs_clarification'] is True
+    assert second['intent']=='price_lookup'
+    assert second['products'][0]['name']=='Highbase Coffee 2'

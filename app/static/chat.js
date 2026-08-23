@@ -3,6 +3,7 @@ const messages=document.querySelector('#messages');
 const input=document.querySelector('#message');
 const send=document.querySelector('#send');
 const error=document.querySelector('#error');
+function usePrompt(text){input.value=text;input.focus();document.querySelector('#chat-form').requestSubmit();}
 
 function addMessage(text,who){
   const el=document.createElement('div'); el.className='msg '+who; el.textContent=text;

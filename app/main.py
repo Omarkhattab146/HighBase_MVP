@@ -72,42 +72,13 @@ def _recommendations(req): return RecommendationResponse(recommendations=recomme
 def recommendations(req:RecommendationRequest): return _recommendations(req)
 
 def _chat(req):
+    container.store=store
     container.tools.store=store
     query=req.message or req.query
-    small_talk=bool(req.message and agent.is_small_talk(query))
-    recs=[]; structured=[]; intent_name="conversation"; needs_clarification=False
-    tools_used=[]
-    response=agent.fallback_scope_response(query)
-    if req.message:
-        session_id, response, tools_used=container.chat.respond(query,req.session_id)
-        product_tool_used=any(name in {"search_products", "check_inventory", "get_product_details"} for name in tools_used)
-        informational_request=any(term in query.lower() for term in ("offer", "discount", "trend", "popular", "price"))
-        if (product_tool_used or (not informational_request and not small_talk and agent.is_highbase_question(query) and agent.needs_recommendations(query))):
-            intent=agent.extract_intent(query,req.business_type)
-            req.query=query
-            req.business_type=req.business_type or intent["business_type"]
-            req.max_price=req.max_price or intent["budget"]
-            recs=recommend(store,req)
-            structured=container.tools.search_products(query=req.query, max_price=req.max_price, limit=req.limit)
-            intent_name="recommendation"
-        if response.endswith("What would you like to check?") and not small_talk and agent.is_highbase_question(query):
-            response=agent.respond(query,recs,req.business_type or "") if recs else "Tell me the product, category, price range, or business metric you want to check."
-    elif req.query:
-        intent=agent.extract_intent(query,req.business_type)
-        req.query=query; req.business_type=req.business_type or intent["business_type"]; req.max_price=req.max_price or intent["budget"]
-        recs=recommend(store,req) if agent.needs_recommendations(query) else []
-        response=agent.respond(query,recs,req.business_type or "")
-    if "offer" in query.lower() or "discount" in query.lower():
-        offer_terms=" ".join(agent.extract_intent(query).get("product_terms", []))
-        structured=container.tools.get_offers(query=offer_terms, limit=req.limit); intent_name="offers"
-    elif "trend" in query.lower() or "popular" in query.lower():
-        structured=container.tools.get_trending_products(limit=req.limit); intent_name="trends"
-    elif "price" in query.lower():
-        price_terms=" ".join(agent.extract_intent(query).get("product_terms", []))
-        structured=container.tools.search_products(query=price_terms, limit=req.limit); intent_name="price"
-    if not req.message:
-        session_id, tools_used=req.session_id or container.sessions.create(), []
-    return ChatResponse(recommendations=recs,response=response,request_id=str(uuid4()),session_id=session_id,tools_used=tools_used,intent=intent_name,products=structured,offers=[x for x in structured if x.get('offer')],trends=[x for x in structured if x.get('trend_growth') is not None],needs_clarification=needs_clarification)
+    req.query=query
+    result=container.assistant.handle(query,req.session_id,req)
+    products=result["products"]
+    return ChatResponse(recommendations=result["recommendations"],response=result["response"],request_id=str(uuid4()),session_id=result["session_id"],tools_used=result["tools_used"],intent=result["intent"],products=products,offers=[x for x in products if x.get('offer')],trends=[x for x in products if x.get('trend_growth') is not None],needs_clarification=result["needs_clarification"])
 @app.post("/chat",response_model=ChatResponse)
 @app.post("/api/v1/chat",response_model=ChatResponse)
 def chat(req:ChatRequest): return _chat(req)

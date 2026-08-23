@@ -41,7 +41,7 @@ def test_chat_prefers_message_and_returns_explainable_response(api_client):
 
     response = api_client.post(
         "/chat",
-        json={"business_type": "Cafe", "query": "rice", "message": "coffee", "limit": 2},
+        json={"business_type": "Cafe", "query": "rice", "message": "recommend coffee", "limit": 2},
     )
 
     body = response.json()
@@ -83,6 +83,44 @@ def test_chat_returns_structured_offer_and_trend_fields(api_client):
     assert all(item["offer"] for item in offer["offers"])
     assert trend["intent"] == "trends"
     assert all(item["trend_growth"] is not None for item in trend["trends"])
+
+
+def test_product_information_asks_for_clarification_on_ambiguous_name(api_client):
+    api_client.post("/data/clean")
+    body=api_client.post("/chat",json={"message":"Tell me about Coffee"}).json()
+    assert body["intent"] == "clarification"
+    assert body["needs_clarification"] is True
+    assert body["recommendations"] == []
+    assert [item["name"] for item in body["products"]] == ["Highbase Coffee 1", "Highbase Coffee 2"]
+
+
+def test_exact_product_price_does_not_recommend_unrelated_products(api_client):
+    api_client.post("/data/clean")
+    body=api_client.post("/chat",json={"message":"What is the price of Highbase Coffee 1?"}).json()
+    assert body["intent"] == "price_lookup"
+    assert body["recommendations"] == []
+    assert len(body["products"]) == 1
+    assert body["products"][0]["name"] == "Highbase Coffee 1"
+    assert "2.48 BHD" in body["response"]
+
+
+def test_budget_catalog_request_returns_products_without_clarification(api_client):
+    api_client.post("/data/clean")
+    body=api_client.post("/chat",json={"message":"Show me products under 5 BHD"}).json()
+    assert body["intent"] == "product_information"
+    assert body["needs_clarification"] is False
+    assert body["products"]
+    assert all(item["price"] <= 5 for item in body["products"] if item["price"] is not None)
+
+
+def test_combined_offers_and_trends_request_returns_both_sections(api_client):
+    api_client.post("/data/clean")
+    body=api_client.post("/chat",json={"message":"What is trendy and offers"}).json()
+    assert body["intent"] == "offers_and_trends"
+    assert "Offers:" in body["response"]
+    assert "Trending:" in body["response"]
+    assert "get_offers" in body["tools_used"]
+    assert "get_trending_products" in body["tools_used"]
 
 
 def test_invalid_recommendation_limit_is_rejected(api_client):

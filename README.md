@@ -91,6 +91,27 @@ Browser/API → FastAPI → ChatOrchestrator → Ollama qwen3:8b
 - Ollama (optional; required for model-powered answers)
 - Docker Desktop (optional; for MongoDB)
 
+## Tech stack
+
+| Layer | Technology | Role |
+|---|---|---|
+| API framework | FastAPI | HTTP API, routing, validation, and OpenAPI documentation |
+| Runtime server | Uvicorn | Local and containerized ASGI server |
+| Language | Python 3.10+ | Application, data, analytics, and test code |
+| Data contracts | Pydantic 2 | Typed request, response, product, offer, and chat models |
+| Configuration | Pydantic Settings | `.env`-based application configuration |
+| AI model | Ollama `qwen3:8b` | Local conversational AI and tool selection |
+| AI protocol | OpenAI-compatible HTTP API | Communication with Ollama through `/v1/chat/completions` |
+| Data storage | JSON files | Default local/demo persistence adapter |
+| Database adapter | MongoDB + PyMongo | Optional database persistence through the repository boundary |
+| Analytics | Python/Pandas-free deterministic services | Sales, trends, RFM, co-purchases, and inventory intelligence |
+| Frontend | HTML, CSS, vanilla JavaScript | Lightweight browser chat interface |
+| Containers | Docker and Docker Compose | Reproducible API and MongoDB runtime |
+| Dependency manager | uv | Fast dependency installation and locked environments |
+| Testing | pytest + FastAPI TestClient | Unit, API, tool, session, and chatbot tests |
+
+The model is isolated from storage. Ollama can request only registered read-only tools, while repositories own access to JSON or MongoDB data.
+
 ## Setup
 
 ```bash
@@ -205,8 +226,36 @@ For MongoDB, set `STORAGE_BACKEND=mongo`, `MONGO_URI=mongodb://mongo:27017`, and
 
 ## Tests
 
+The test suite is built with **pytest** and is configured in `pyproject.toml`. It covers:
+
+- Data generation, cleaning, and recommendation ranking.
+- FastAPI endpoints and backwards-compatible chat behavior.
+- Product, inventory, offer, trend, and database tools.
+- Session memory and tool-call orchestration.
+- Ollama fallback behavior and mocked model responses.
+
+Run the complete pytest suite:
+
 ```bash
 uv run pytest -q
+```
+
+Run a specific test file:
+
+```bash
+uv run pytest tests/test_api.py -q
+uv run pytest tests/test_database_tools.py -q
+```
+
+Run pytest with more detailed output:
+
+```bash
+uv run pytest -vv
+```
+
+Run the application compilation check separately:
+
+```bash
 uv run python -m compileall -q app
 ```
 
