@@ -1,18 +1,76 @@
-# HIGHBASE Customer Recommendation AI
+# HIGHBASE — Your Smarter Sales Assistant
 
-FastAPI product recommendations and a customer-facing business chatbot powered by the local Ollama model `qwen3:8b`. The default data is synthetic demo data; product URLs and metrics are not production catalog data.
+> Turn business data into better buying decisions.
 
-## Features
+HIGHBASE is an AI-powered sales assistant for shop owners, restaurants, cafés, mini markets, caterers, and hotels. Ask a simple question and get a clear answer about products, prices, inventory, offers, sales performance, and what is trending.
 
-- EDA, cleaning, feature engineering, sales analytics, trends, RFM, co-purchases, and inventory intelligence.
-- Explainable recommendations that exclude out-of-stock products.
-- Ollama chat with validated, read-only tools: `search_products`, `check_inventory`, `get_product_details`, `get_analytics_summary`, `get_offers`, `get_trending_products`, and `get_database_overview`.
-- Structured chat facts for prices, synthetic offers, offer validity, availability, and recent sales-growth trends.
-- Short-lived in-memory sessions and a browser UI.
+Powered by FastAPI, trusted business-data tools, and local Ollama AI (`qwen3:8b`), HIGHBASE connects friendly conversation with reliable product intelligence.
+
+> **Demo note:** This project currently uses synthetic HIGHBASE data. Product URLs, offers, stock, and business metrics are demonstration data—not a live catalog.
+
+## What HIGHBASE offers
+
+### A helpful business conversation
+
+Chat naturally instead of searching through spreadsheets or dashboards. HIGHBASE understands questions such as:
+
+- “Which coffee products are in stock?”
+- “What is the price of Highbase Coffee 1?”
+- “What offers are available?”
+- “What products are trending?”
+- “Show me products under 5 BHD.”
+- “How many orders are in the database?”
+
+It handles greetings and follow-up questions naturally, while staying focused on HIGHBASE business information.
+
+### Product discovery and recommendations
+
+Find relevant products using product names, categories, budgets, and availability. Recommendations are explainable, include reasons and links, and exclude products that are out of stock.
+
+### Inventory visibility
+
+Check stock status and quantities before making a decision. Missing or zero stock is reported clearly instead of being treated as available.
+
+### Offers and pricing
+
+See current synthetic offers with the regular price, discounted price, discount percentage, eligibility, description, and validity date. Price questions return structured product facts rather than vague chatbot guesses.
+
+### Trend discovery
+
+Discover products and categories gaining momentum through recent sales growth. Trend results include growth values and a clear “Trending” label.
+
+### Business intelligence
+
+Explore aggregate sales, categories, orders, revenue-related metrics, co-purchases, RFM signals, inventory, and database collection counts through chat or API endpoints.
+
+### Safe, grounded answers
+
+The assistant cannot execute arbitrary database queries. It can only use approved read-only tools, and it must use returned data for prices, stock, offers, trends, and sales facts. Unrelated questions receive a friendly redirect instead of an invented answer.
+
+## Why it is useful
+
+```text
+Ask naturally → Retrieve trusted business facts → Understand the answer → Act faster
+```
+
+HIGHBASE brings the practical benefits of a sales dashboard into a simple customer-service conversation:
+
+- Less time searching through data.
+- Faster product and stock checks.
+- Clearer purchasing decisions.
+- Explainable recommendations instead of black-box rankings.
+- One friendly interface for catalog and business questions.
+
+## Product capabilities
+
+- EDA, data cleaning, feature engineering, sales analytics, trends, RFM, co-purchases, and inventory intelligence.
+- Explainable recommendations with availability, score, reasons, and product URLs.
+- Offers with discount, offer price, validity, eligibility, and description.
+- Ollama chat with validated tools: `search_products`, `check_inventory`, `get_product_details`, `get_analytics_summary`, `get_offers`, `get_trending_products`, and `get_database_overview`.
+- Structured product facts for prices, offers, availability, stock, trends, and freshness.
+- Browser chat UI with loading states, retry handling, and product cards.
+- Short-lived chat sessions and deterministic fallback when Ollama is unavailable.
 - JSON storage by default, with a MongoDB repository adapter.
-- Deterministic fallback responses when Ollama is unavailable.
-
-The model never receives a database connection or arbitrary query access. It can only call registered business tools.
 
 ## Architecture
 
