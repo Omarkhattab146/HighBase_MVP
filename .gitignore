@@ -1,0 +1,64 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Test, coverage, and type-checker output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.pyre/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+MANIFEST
+
+# Application and tool logs
+*.log
+logs/
+
+# Local databases and generated exports
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Project plans and other Markdown files; keep README files versioned.
+*.md
+!README.md
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

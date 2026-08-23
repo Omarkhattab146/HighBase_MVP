@@ -1,0 +1,162 @@
+[
+  {
+    "customer_id": "C001",
+    "shop_name": "Restaurant 01",
+    "business_type": "Restaurant",
+    "city": "Riffa",
+    "business_size": "Large",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C002",
+    "shop_name": "Cafe 02",
+    "business_type": "Cafe",
+    "city": "Muharraq",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C003",
+    "shop_name": "Mini Market 03",
+    "business_type": "Mini Market",
+    "city": "Muharraq",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C004",
+    "shop_name": "Catering 04",
+    "business_type": "Catering",
+    "city": "Muharraq",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C005",
+    "shop_name": "Hotel 05",
+    "business_type": "Hotel",
+    "city": "Manama",
+    "business_size": "Large",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C006",
+    "shop_name": "Restaurant 06",
+    "business_type": "Restaurant",
+    "city": "Manama",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C007",
+    "shop_name": "Cafe 07",
+    "business_type": "Cafe",
+    "city": "Manama",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C008",
+    "shop_name": "Mini Market 08",
+    "business_type": "Mini Market",
+    "city": "Manama",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C009",
+    "shop_name": "Catering 09",
+    "business_type": "Catering",
+    "city": "Riffa",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C010",
+    "shop_name": "Hotel 10",
+    "business_type": "Hotel",
+    "city": "Muharraq",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C011",
+    "shop_name": "Restaurant 11",
+    "business_type": "Restaurant",
+    "city": "Manama",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C012",
+    "shop_name": "Cafe 12",
+    "business_type": "Cafe",
+    "city": "Riffa",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C013",
+    "shop_name": "Mini Market 13",
+    "business_type": "Mini Market",
+    "city": "Muharraq",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C014",
+    "shop_name": "Catering 14",
+    "business_type": "Catering",
+    "city": "Muharraq",
+    "business_size": "Large",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C015",
+    "shop_name": "Hotel 15",
+    "business_type": "Hotel",
+    "city": "Muharraq",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C016",
+    "shop_name": "Restaurant 16",
+    "business_type": "Restaurant",
+    "city": "Muharraq",
+    "business_size": "Large",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C017",
+    "shop_name": "Cafe 17",
+    "business_type": "Cafe",
+    "city": "Manama",
+    "business_size": "Large",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C018",
+    "shop_name": "Mini Market 18",
+    "business_type": "Mini Market",
+    "city": "Muharraq",
+    "business_size": "Small",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C019",
+    "shop_name": "Catering 19",
+    "business_type": "Catering",
+    "city": "Manama",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  },
+  {
+    "customer_id": "C020",
+    "shop_name": "Hotel 20",
+    "business_type": "Hotel",
+    "city": "Riffa",
+    "business_size": "Medium",
+    "customer_since": "2026-01-01"
+  }
+]

@@ -1,0 +1,30 @@
+[project]
+name = "highbase-customer-recommendation-ai"
+version = "0.1.0"
+description = "Deterministic MVP AI chatbot for customer sales recommendations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "pydantic==2.10.5",
+    "pydantic-settings==2.7.1",
+    "pymongo==4.10.1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx==0.28.1",
+    "pytest==8.3.4",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]

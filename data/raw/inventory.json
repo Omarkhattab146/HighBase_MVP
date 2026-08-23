@@ -1,0 +1,156 @@
+[
+  {
+    "product_id": "P1001",
+    "stock_quantity": 198,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1002",
+    "stock_quantity": 111,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1003",
+    "stock_quantity": 171,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1004",
+    "stock_quantity": 0,
+    "reorder_level": 30,
+    "availability": "Out of Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1005",
+    "stock_quantity": 27,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1006",
+    "stock_quantity": 200,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1007",
+    "stock_quantity": 199,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1008",
+    "stock_quantity": 110,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1009",
+    "stock_quantity": 165,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1010",
+    "stock_quantity": 164,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1011",
+    "stock_quantity": 56,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1012",
+    "stock_quantity": 164,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1013",
+    "stock_quantity": 68,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1014",
+    "stock_quantity": 146,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1015",
+    "stock_quantity": 158,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1016",
+    "stock_quantity": 99,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1017",
+    "stock_quantity": 0,
+    "reorder_level": 30,
+    "availability": "Out of Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1018",
+    "stock_quantity": 64,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1019",
+    "stock_quantity": 145,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1020",
+    "stock_quantity": 29,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1021",
+    "stock_quantity": 43,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  },
+  {
+    "product_id": "P1022",
+    "stock_quantity": 34,
+    "reorder_level": 30,
+    "availability": "In Stock",
+    "snapshot_date": "2026-06-01"
+  }
+]

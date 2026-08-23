@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      MONGODB_DATABASE: highbase_mvp
+    depends_on: [mongo]
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]

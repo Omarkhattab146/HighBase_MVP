@@ -1,0 +1,445 @@
+[
+  {
+    "product_id": "P1001",
+    "name": "Highbase Water 1",
+    "category": "Beverages",
+    "subcategory": "Water",
+    "brand": "Highbase Select",
+    "price": 2.89,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1001",
+    "quality_flags": [],
+    "category_code": 1,
+    "subcategory_code": 11,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 1,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1002",
+    "name": "Highbase Water 2",
+    "category": "Beverages",
+    "subcategory": "Water",
+    "brand": "Highbase Select",
+    "price": 4.734999999999999,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1002",
+    "quality_flags": [
+      "missing_price_imputed_median"
+    ],
+    "category_code": 1,
+    "subcategory_code": 11,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 1,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1003",
+    "name": "Highbase Juice 1",
+    "category": "Beverages",
+    "subcategory": "Juice",
+    "brand": "FreshDay",
+    "price": 3.37,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1003",
+    "quality_flags": [],
+    "category_code": 1,
+    "subcategory_code": 7,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 1,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1005",
+    "name": "Highbase Coffee 1",
+    "category": "Beverages",
+    "subcategory": "Coffee",
+    "brand": "Highbase Select",
+    "price": 2.48,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1005",
+    "quality_flags": [],
+    "category_code": 1,
+    "subcategory_code": 5,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 1,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1006",
+    "name": "Highbase Coffee 2",
+    "category": "Beverages",
+    "subcategory": "Coffee",
+    "brand": "Gulf Choice",
+    "price": 1.54,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1006",
+    "quality_flags": [],
+    "category_code": 1,
+    "subcategory_code": 5,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 1,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1007",
+    "name": "Highbase Chips 1",
+    "category": "Snacks",
+    "subcategory": "Chips",
+    "brand": "FreshDay",
+    "price": 4.72,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1007",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 3,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1008",
+    "name": "Highbase Chips 2",
+    "category": "Snacks",
+    "subcategory": "Chips",
+    "brand": "Highbase Select",
+    "price": 11.23,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1008",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 3,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1009",
+    "name": "Highbase Biscuits 1",
+    "category": "Snacks",
+    "subcategory": "Biscuits",
+    "brand": "Highbase Select",
+    "price": 4.38,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1009",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 1,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1010",
+    "name": "Highbase Biscuits 2",
+    "category": "Snacks",
+    "subcategory": "Biscuits",
+    "brand": "Highbase Select",
+    "price": 12.92,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1010",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 1,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1011",
+    "name": "Highbase Chocolate 1",
+    "category": "Snacks",
+    "subcategory": "Chocolate",
+    "brand": "Gulf Choice",
+    "price": 4.75,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1011",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 4,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1012",
+    "name": "Highbase Chocolate 2",
+    "category": "Snacks",
+    "subcategory": "Chocolate",
+    "brand": "Highbase Select",
+    "price": 5.73,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1012",
+    "quality_flags": [],
+    "category_code": 4,
+    "subcategory_code": 4,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 0,
+      "category_snacks": 1
+    }
+  },
+  {
+    "product_id": "P1013",
+    "name": "Highbase Milk 1",
+    "category": "Dairy",
+    "subcategory": "Milk",
+    "brand": "FreshDay",
+    "price": 13.9,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1013",
+    "quality_flags": [],
+    "category_code": 2,
+    "subcategory_code": 8,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 1,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1014",
+    "name": "Highbase Milk 2",
+    "category": "Dairy",
+    "subcategory": "Milk",
+    "brand": "FreshDay",
+    "price": 12.87,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1014",
+    "quality_flags": [],
+    "category_code": 2,
+    "subcategory_code": 8,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 1,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1015",
+    "name": "Highbase Cheese 1",
+    "category": "Dairy",
+    "subcategory": "Cheese",
+    "brand": "Gulf Choice",
+    "price": 5.72,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1015",
+    "quality_flags": [],
+    "category_code": 2,
+    "subcategory_code": 2,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 1,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1016",
+    "name": "Highbase Cheese 2",
+    "category": "Dairy",
+    "subcategory": "Cheese",
+    "brand": "FreshDay",
+    "price": 17.27,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1016",
+    "quality_flags": [],
+    "category_code": 2,
+    "subcategory_code": 2,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 1,
+      "category_pantry": 0,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1017",
+    "name": "Highbase Rice 1",
+    "category": "Pantry",
+    "subcategory": "Rice",
+    "brand": "Gulf Choice",
+    "price": 2.74,
+    "currency": "BHD",
+    "availability": "Out of Stock",
+    "product_url": "https://highbase.example/products/P1017",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 10,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1018",
+    "name": "Highbase Rice 2",
+    "category": "Pantry",
+    "subcategory": "Rice",
+    "brand": "Gulf Choice",
+    "price": 2.64,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1018",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 10,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1019",
+    "name": "Highbase Pasta 1",
+    "category": "Pantry",
+    "subcategory": "Pasta",
+    "brand": "Gulf Choice",
+    "price": 11.26,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1019",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 9,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1020",
+    "name": "Highbase Pasta 2",
+    "category": "Pantry",
+    "subcategory": "Pasta",
+    "brand": "FreshDay",
+    "price": 13.41,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1020",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 9,
+    "brand_code": 1,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1021",
+    "name": "Highbase Cooking Oil 1",
+    "category": "Pantry",
+    "subcategory": "Cooking Oil",
+    "brand": "Highbase Select",
+    "price": 3.12,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1021",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 6,
+    "brand_code": 3,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  },
+  {
+    "product_id": "P1022",
+    "name": "Highbase Cooking Oil 2",
+    "category": "Pantry",
+    "subcategory": "Cooking Oil",
+    "brand": "Gulf Choice",
+    "price": 2.34,
+    "currency": "BHD",
+    "availability": "In Stock",
+    "product_url": "https://highbase.example/products/P1022",
+    "quality_flags": [],
+    "category_code": 3,
+    "subcategory_code": 6,
+    "brand_code": 2,
+    "category_one_hot": {
+      "category_beverages": 0,
+      "category_dairy": 0,
+      "category_pantry": 1,
+      "category_snacks": 0
+    }
+  }
+]
