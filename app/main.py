@@ -84,7 +84,7 @@ def _chat(req):
 def chat(req:ChatRequest): return _chat(req)
 
 @app.get('/ui', include_in_schema=False)
-def ui(): return FileResponse('app/static/index.html')
+def ui(): return FileResponse(Path(__file__).parent / 'static' / 'index.html')
 
 @app.post('/api/v1/chat/session', response_model=SessionResponse)
 @app.post('/chat/session', response_model=SessionResponse)
